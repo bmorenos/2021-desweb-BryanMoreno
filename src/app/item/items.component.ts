@@ -14,5 +14,13 @@ export class ItemsComponent implements OnInit {
   constructor(private itemService: ItemService) {}
 
   ngOnInit(): void {
+    //this.items = this.itemService.getItems()
+    this.itemService.getItems().subscribe(
+      response => {
+        this.items=response.photos;
+        console.dir(this.items);
+      },
+      error => console.log(error)
+    );
   }
 }

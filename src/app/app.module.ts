@@ -8,7 +8,10 @@ import { ItemDetailComponent } from './item/item-detail.component'
 
 @NgModule({
   bootstrap: [AppComponent],
-  imports: [],
+  imports: [
+    NativeScriptModule,
+    NativeScriptHttpClientModule,
+    AppRoutingModule],
   declarations: [AppComponent, ItemsComponent, ItemDetailComponent],
   providers: [],
   schemas: [NO_ERRORS_SCHEMA],
